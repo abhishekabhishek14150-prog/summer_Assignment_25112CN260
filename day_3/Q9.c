@@ -1,21 +1,25 @@
-#include<stdio.h>
-int main(){
-    int num, i, flag=0;
-    printf("enter the number :");
-    scanf("%d",&num);
-    if(num<=1){
-        printf("number is not prime");
-        return 0;
-    }
-    for(i=2; i<=num/2; i++){
-        if(num%i==0){
-            flag=1;
-            break;
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout << "enter a number ";
+    cin >> num;
+    int count = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        if (num % i == 0)
+        {
+            count++;
         }
     }
-    if(flag==0){
-        printf("number is prime");
-    }else{
-        printf("number is not prime");
+    if (count == 2)
+    {
+        cout << num << "is a prime number" << endl;
     }
+    else
+    {
+        cout << num << " is not a prime number" << endl;
+    }
+    return 0;
 }
